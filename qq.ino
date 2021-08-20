@@ -93,6 +93,8 @@ void loop()
  // Serial.print(x); Serial.print("\t");
  // Serial.print(y);  Serial.print("\t");
   float heading = atan2(y, x);
+  
+    
   if(heading < 0)
   heading += 2 * M_PI;
   Serial.print("rotate_angle is: ");
@@ -102,6 +104,7 @@ void loop()
   Serial.print("heading:\t");
   delay(10);
   Serial.println(heading * 180/M_PI);
+  heading = heading * 180/M_PI;
 
 //  h_angle = heading; //yiseul
 //  angle.data = h_angle; //yiseul
